@@ -1,134 +1,250 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BCNHS | Bislig City National High School</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <style>
-        .bg-bcnhs-maroon { background-color: #800000; }
-        .text-bcnhs-maroon { color: #800000; }
-        .border-bcnhs-gold { border-color: #FFD700; }
-        .slide { display: none; }
-        .slide:first-child { display: block; }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bislig City National High School | BCNHS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white text-slate-900 antialiased">
 
-    <div class="bg-bcnhs-maroon text-white text-[10px] py-2 px-[5%] flex justify-between items-center uppercase tracking-widest font-bold">
-        <span>DepEd Region XIII • Division of Bislig City</span>
-        <div class="space-x-4 hidden md:block">
-            <a href="#" class="hover:text-yellow-400">Transparency</a>
-            <a href="#" class="hover:text-yellow-400">Careers</a>
-            <a href="#" class="hover:text-yellow-400">Portal Login</a>
+<body class="bg-slate-50 text-slate-900">
+  <!-- Top bar -->
+  <div class="bg-slate-900 text-slate-100">
+    <div class="mx-auto max-w-6xl px-4 py-2 flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between text-sm">
+      <div class="flex flex-wrap gap-x-4 gap-y-1">
+        <span class="inline-flex items-center gap-2">
+          <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+          Official BCNHS Website Concept
+        </span>
+        <a class="hover:text-emerald-300" href="#announcements">Announcements</a>
+        <a class="hover:text-emerald-300" href="#updates">Updates</a>
+        <a class="hover:text-emerald-300" href="#contact">Contact</a>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <a class="px-3 py-1 rounded bg-white/10 hover:bg-white/15" target="_blank" rel="noopener"
+           href="https://www.facebook.com/BisligCityNHS/">
+          Visit Official Facebook
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between gap-3">
+      <a href="#" class="flex items-center gap-3">
+        <div class="h-11 w-11 rounded-2xl bg-gradient-to-br from-emerald-600 to-sky-600 grid place-items-center shadow">
+          <span class="text-white font-black">BC</span>
         </div>
+        <div class="leading-tight">
+          <div class="font-extrabold tracking-tight">Bislig City National High School</div>
+          <div class="text-xs text-slate-600">Bislig City, Surigao del Sur</div>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 font-medium">
+        <a class="hover:text-emerald-700" href="#about">About</a>
+        <a class="hover:text-emerald-700" href="#announcements">Announcements</a>
+        <a class="hover:text-emerald-700" href="#updates">News & Events</a>
+        <a class="hover:text-emerald-700" href="#contact">Contact</a>
+      </nav>
+
+      <button id="menuBtn" class="md:hidden px-3 py-2 rounded-xl border border-slate-300 hover:bg-slate-100">
+        ☰
+      </button>
     </div>
 
-    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <img src="img/logo.png" alt="BCNHS Logo" class="h-14 w-14 md:h-16 md:w-16 object-contain">
-                <div class="border-l-2 border-gray-200 pl-4">
-                    <h1 class="text-lg md:text-2xl font-black text-bcnhs-maroon uppercase leading-none tracking-tighter">Bislig City</h1>
-                    <p class="text-[10px] md:text-xs text-gray-500 font-bold uppercase tracking-widest">National High School</p>
-                </div>
-            </div>
-            <nav class="hidden lg:block">
-                <ul class="flex space-x-8 text-[11px] font-black uppercase tracking-widest text-slate-600">
-                    <li><a href="#" class="hover:text-bcnhs-maroon transition-colors">The School</a></li>
-                    <li><a href="#" class="hover:text-bcnhs-maroon transition-colors">Academics</a></li>
-                    <li><a href="#" class="hover:text-bcnhs-maroon transition-colors">Admission</a></li>
-                    <li><a href="#" class="hover:text-bcnhs-maroon transition-colors">Student Life</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <div class="relative w-full h-[500px] md:h-[650px] bg-slate-900 overflow-hidden">
-        <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('img/slide1.jpg');"></div>
-        <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('img/slide2.jpg');"></div>
-        <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('img/slide3.jpg');"></div>
-        <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('img/slide4.jpg');"></div>
-        <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('img/slide5.jpg');"></div>
-        
-        <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent z-10"></div>
-        
-        <div class="absolute inset-0 flex items-center px-[5%] z-20">
-            <div class="max-w-2xl text-white">
-                <h2 class="text-4xl md:text-7xl font-black uppercase leading-tight mb-4 drop-shadow-2xl">
-                    Excellence <br><span class="text-bcnhs-gold">Through Service</span>
-                </h2>
-                <p class="text-sm md:text-lg font-medium mb-8 text-gray-200 max-w-lg">
-                    Providing high-quality education and character building for the youth of Bislig City since 2002.
-                </p>
-                <div class="flex gap-4">
-                    <a href="#" class="bg-bcnhs-maroon border-2 border-bcnhs-gold px-8 py-3 text-sm font-black uppercase tracking-widest hover:bg-white hover:text-bcnhs-maroon transition-all">Enrollment Info</a>
-                    <a href="#" class="bg-white/10 backdrop-blur-md border-2 border-white/30 px-8 py-3 text-sm font-black uppercase tracking-widest hover:bg-white hover:text-bcnhs-maroon transition-all">Explore BCNHS</a>
-                </div>
-            </div>
-        </div>
+    <div id="mobileNav" class="md:hidden hidden border-t border-slate-200 bg-white">
+      <div class="mx-auto max-w-6xl px-4 py-3 grid gap-2 font-medium">
+        <a class="py-2 hover:text-emerald-700" href="#about">About</a>
+        <a class="py-2 hover:text-emerald-700" href="#announcements">Announcements</a>
+        <a class="py-2 hover:text-emerald-700" href="#updates">News & Events</a>
+        <a class="py-2 hover:text-emerald-700" href="#contact">Contact</a>
+      </div>
     </div>
+  </header>
 
-    <section class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-            <h3 class="text-bcnhs-maroon font-black text-sm uppercase tracking-[0.3em] mb-2">Academic Excellence</h3>
-            <h4 class="text-3xl md:text-5xl font-black text-slate-900">Education for the Future</h4>
-        </div>
+  <!-- Hero -->
+  <section class="bg-slate-950 text-white">
+    <div class="mx-auto max-w-6xl px-4 py-14 grid lg:grid-cols-2 gap-8 items-center">
+      <div>
+        <p class="inline-flex items-center gap-2 text-sm bg-white/10 border border-white/15 px-3 py-1 rounded-full">
+          <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+          BCNHS • Student-first • Community-driven
+        </p>
+        <h1 class="mt-4 text-4xl font-black tracking-tight">
+          Welcome to Bislig City National High School
+        </h1>
+        <p class="mt-3 text-white/80 leading-relaxed">
+          Your hub for announcements, school updates, events, and important information—designed to be simple,
+          fast, and mobile-friendly.
+        </p>
 
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="group bg-slate-50 p-10 border-t-4 border-bcnhs-maroon hover:bg-white hover:shadow-2xl transition-all">
-                <div class="text-4xl mb-4">🔬</div>
-                <h5 class="text-xl font-black mb-3 text-bcnhs-maroon uppercase">STEM Strand</h5>
-                <p class="text-sm text-slate-600 leading-relaxed">Developing future scientists, engineers, and mathematicians through rigorous academic training.</p>
-            </div>
-            <div class="group bg-slate-50 p-10 border-t-4 border-bcnhs-gold hover:bg-white hover:shadow-2xl transition-all">
-                <div class="text-4xl mb-4">📊</div>
-                <h5 class="text-xl font-black mb-3 text-bcnhs-maroon uppercase">ABM Strand</h5>
-                <p class="text-sm text-slate-600 leading-relaxed">Equipping students with business, accountancy, and management skills for the global market.</p>
-            </div>
-            <div class="group bg-slate-50 p-10 border-t-4 border-bcnhs-maroon hover:bg-white hover:shadow-2xl transition-all">
-                <div class="text-4xl mb-4">⚖️</div>
-                <h5 class="text-xl font-black mb-3 text-bcnhs-maroon uppercase">HUMSS Strand</h5>
-                <p class="text-sm text-slate-600 leading-relaxed">Nurturing critical thinking and social awareness for future leaders in humanities and social sciences.</p>
-            </div>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#announcements" class="px-5 py-3 rounded-2xl bg-emerald-600 hover:bg-emerald-700 font-semibold shadow">
+            View Announcements
+          </a>
+          <a href="#updates" class="px-5 py-3 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/15 font-semibold">
+            News & Events
+          </a>
+          <a href="#contact" class="px-5 py-3 rounded-2xl bg-white/0 hover:bg-white/10 border border-white/15 font-semibold">
+            Contact / Location
+          </a>
         </div>
+      </div>
+
+      <div class="bg-white text-slate-900 rounded-3xl border border-slate-200 shadow-2xl overflow-hidden">
+        <div class="p-5 border-b border-slate-200">
+          <div class="font-extrabold">Quick Links</div>
+          <div class="text-sm text-slate-600">Most-used shortcuts (edit anytime)</div>
+        </div>
+        <div class="p-5 grid sm:grid-cols-2 gap-3">
+          <a class="p-4 rounded-2xl border border-slate-200 hover:bg-emerald-50 hover:border-emerald-300" href="#announcements">
+            <div class="font-bold">Announcements</div>
+            <div class="text-sm text-slate-600">Official notices</div>
+          </a>
+          <a class="p-4 rounded-2xl border border-slate-200 hover:bg-sky-50 hover:border-sky-300" href="#updates">
+            <div class="font-bold">News & Events</div>
+            <div class="text-sm text-slate-600">Campus updates</div>
+          </a>
+          <a class="p-4 rounded-2xl border border-slate-200 hover:bg-violet-50 hover:border-violet-300" href="#">
+            <div class="font-bold">Enrollment</div>
+            <div class="text-sm text-slate-600">Requirements</div>
+          </a>
+          <a class="p-4 rounded-2xl border border-slate-200 hover:bg-amber-50 hover:border-amber-300" href="#">
+            <div class="font-bold">Student Services</div>
+            <div class="text-sm text-slate-600">Guidance & support</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="mx-auto max-w-6xl px-4 py-10 space-y-10">
+    <!-- About -->
+    <section id="about" class="bg-white rounded-3xl border border-slate-200 p-6">
+      <h2 class="text-xl font-extrabold">About BCNHS</h2>
+      <p class="mt-2 text-slate-700 leading-relaxed">
+        Bislig City National High School (BCNHS) is a public secondary school in Bislig City, Surigao del Sur.
+        This page is a clean website concept you can expand into a full official portal.
+      </p>
+      <div class="mt-4 grid md:grid-cols-3 gap-3 text-sm">
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+          <div class="font-semibold">Location</div>
+          <div class="text-slate-600">Poblacion, Bislig City</div>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+          <div class="font-semibold">Province</div>
+          <div class="text-slate-600">Surigao del Sur</div>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+          <div class="font-semibold">Official Updates</div>
+          <div class="text-slate-600">Posted on FB pages</div>
+        </div>
+      </div>
     </section>
 
-    <footer class="bg-slate-950 text-white py-20 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
-            <div class="col-span-2">
-                <img src="img/logo.png" alt="Logo" class="h-16 mb-6 grayscale brightness-200">
-                <h4 class="text-2xl font-black mb-4">Bislig City National High School</h4>
-                <p class="text-slate-400 text-sm max-w-md leading-relaxed">
-                    Dedicated to providing a world-class secondary education that empowers Filipino students to be globally competitive and morally upright.
-                </p>
-            </div>
-            <div>
-                <h5 class="font-black text-bcnhs-gold uppercase text-xs tracking-widest mb-6">Contact Us</h5>
-                <p class="text-sm text-slate-400">Bislig City, Surigao del Sur<br>Philippines</p>
-            </div>
-            <div>
-                <h5 class="font-black text-bcnhs-gold uppercase text-xs tracking-widest mb-6">Stay Connected</h5>
-                <a href="https://www.facebook.com/BisligCityNHS" class="text-sm text-slate-400 hover:text-white transition">Facebook Page</a>
-            </div>
+    <!-- Announcements -->
+    <section id="announcements" class="grid lg:grid-cols-3 gap-5">
+      <div class="lg:col-span-1 bg-white rounded-3xl border border-slate-200 p-6">
+        <h2 class="text-xl font-extrabold">Announcements</h2>
+        <div class="mt-4 space-y-3 text-sm">
+          <div class="p-4 rounded-2xl border border-slate-200">
+            <div class="font-semibold">📌 Enrollment Reminder</div>
+            <div class="text-slate-600 mt-1">Add your enrollment dates, requirements, and office hours here.</div>
+          </div>
+          <div class="p-4 rounded-2xl border border-slate-200">
+            <div class="font-semibold">📌 Classes / Activities</div>
+            <div class="text-slate-600 mt-1">Post changes, schedules, and important advisories.</div>
+          </div>
+          <div class="p-4 rounded-2xl border border-slate-200">
+            <div class="font-semibold">📌 Competitions & Awards</div>
+            <div class="text-slate-600 mt-1">Highlight student achievements and announcements.</div>
+          </div>
         </div>
-        <div class="max-w-7xl mx-auto border-t border-slate-800 mt-16 pt-8 text-[10px] text-slate-500 uppercase tracking-widest text-center md:text-left">
-            &copy; 2026 Bislig City National High School. All Rights Reserved.
-        </div>
-    </footer>
+      </div>
 
-    <script>
-        $(document).ready(function() {
-            let slides = $('.slide');
-            let currentIndex = 0;
-            function showNextSlide() {
-                $(slides[currentIndex]).fadeOut(1500);
-                currentIndex = (currentIndex + 1) % slides.length;
-                $(slides[currentIndex]).fadeIn(1500);
-            }
-            setInterval(showNextSlide, 5000);
-        });
-    </script>
+      <div id="updates" class="lg:col-span-2 bg-white rounded-3xl border border-slate-200 p-6">
+        <div class="flex items-end justify-between gap-3">
+          <div>
+            <h2 class="text-xl font-extrabold">News & Events</h2>
+            <p class="text-slate-600 text-sm mt-1">Quick cards (you can replace with real posts later).</p>
+          </div>
+          <a class="px-4 py-2 rounded-xl border border-slate-300 hover:bg-slate-50 text-sm font-medium"
+             target="_blank" rel="noopener" href="https://www.facebook.com/BisligCityNHS/">
+            Open FB Updates →
+          </a>
+        </div>
+
+        <div class="mt-5 grid md:grid-cols-2 gap-4">
+          <article class="p-5 rounded-2xl border border-slate-200 hover:shadow-sm">
+            <div class="text-xs text-slate-500">Event</div>
+            <h3 class="font-bold mt-1">Campus Activity Week</h3>
+            <p class="text-sm text-slate-600 mt-2">Put your schedule, venue, and reminders here.</p>
+          </article>
+          <article class="p-5 rounded-2xl border border-slate-200 hover:shadow-sm">
+            <div class="text-xs text-slate-500">News</div>
+            <h3 class="font-bold mt-1">Student Achievement Spotlight</h3>
+            <p class="text-sm text-slate-600 mt-2">Add highlights, photos link, and credits.</p>
+          </article>
+          <article class="p-5 rounded-2xl border border-slate-200 hover:shadow-sm">
+            <div class="text-xs text-slate-500">Advisory</div>
+            <h3 class="font-bold mt-1">Weather / Safety Reminder</h3>
+            <p class="text-sm text-slate-600 mt-2">Add official advisories and what students should do.</p>
+          </article>
+          <article class="p-5 rounded-2xl border border-slate-200 hover:shadow-sm">
+            <div class="text-xs text-slate-500">Announcement</div>
+            <h3 class="font-bold mt-1">PTA / Community Meeting</h3>
+            <p class="text-sm text-slate-600 mt-2">Add meeting time, agenda, and location.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-white rounded-3xl border border-slate-200 p-6">
+      <h2 class="text-xl font-extrabold">Contact & Location</h2>
+      <p class="mt-2 text-slate-700">
+        Address: <span class="font-semibold">National Hwy., Poblacion, Bislig City, 8311, Surigao del Sur, Philippines</span>
+      </p>
+
+      <div class="mt-4 flex flex-wrap gap-3">
+        <a class="px-4 py-2 rounded-xl bg-slate-900 text-white hover:bg-slate-800 text-sm font-semibold"
+           target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&query=Bislig%20City%20National%20High%20School">
+          Open in Google Maps
+        </a>
+        <a class="px-4 py-2 rounded-xl border border-slate-300 hover:bg-slate-50 text-sm font-semibold"
+           target="_blank" rel="noopener" href="https://www.facebook.com/BisligCityNHS/">
+          Official Facebook Page
+        </a>
+      </div>
+
+      <p class="mt-4 text-xs text-slate-500">
+        Tip: If you want, I can add a “Downloads” section (forms), “Faculty directory”, and “Enrollment steps”
+        without making the code long.
+      </p>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto max-w-6xl px-4 py-8 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+      <div class="text-sm text-slate-600">
+        © <span id="year"></span> Bislig City National High School (BCNHS). All rights reserved.
+      </div>
+      <div class="text-sm flex gap-4">
+        <a class="hover:text-emerald-700" href="#about">About</a>
+        <a class="hover:text-emerald-700" href="#announcements">Announcements</a>
+        <a class="hover:text-emerald-700" href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn?.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
