@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCNHS | Bislig City National High School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .bg-bcnhs-maroon { background-color: #800000; }
+        .text-bcnhs-maroon { color: #800000; }
+        .border-bcnhs-gold { border-color: #FFD700; }
+        .slide { display: none; }
+        .slide:first-child { display: block; }
+    </style>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+    <div class="bg-bcnhs-maroon text-white text-[10px] py-2 px-[5%] flex justify-between items-center uppercase tracking-widest font-bold">
+        <span>DepEd Region XIII • Division of Bislig City</span>
+        <div class="space-x-4 hidden md:block">
+            <a href="#" class="hover:text-yellow-400">Transparency</a>
+            <a href="#" class="hover:text-yellow-400">Careers</a>
+            <a href="#" class="hover:text-yellow-400">Portal Login</a>
+        </div>
+    </div>
+
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <img src="img/logo.png" alt="BCNHS Logo" class="h-14 w-14 md:h-16 md:w-16 object-contain">
+                <div class="border-l-2 border-gray-200 pl-4">
+                    <h1 class="text-lg md:text-2xl font-black text-bcnhs-maroon uppercase leading-none tracking-tighter">Bislig City</h1>
+                    <p class="text-[10px] md:text-xs text-gray-500 font-bold uppercase tracking-widest">National High School</p>
+                </div>
+            </div>
+            <nav class="hidden lg:block">
+                <ul class="flex space-x-8 text-[11px] font-black uppercase tracking-widest text-slate-600">
+                    <li><a href="#" class="hover:text-bcnhs-maroon transition-colors">The School</a></li>
+                    <li><a href="#" class="hover:text-bcnhs-maroon transition-colors">Academics</a></li>
+                    <li><a href="#" class="hover:text-bcnhs-maroon transition-colors">Admission</a></li>
+                    <li><a href="#" class="hover:text-bcnhs-maroon transition-colors">Student Life</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="relative w-full h-[500px] md:h-[650px] bg-slate-900 overflow-hidden">
+        <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('img/slide1.jpg');"></div>
+        <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('img/slide2.jpg');"></div>
+        <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('img/slide3.jpg');"></div>
+        <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('img/slide4.jpg');"></div>
+        <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('img/slide5.jpg');"></div>
+        
+        <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent z-10"></div>
+        
+        <div class="absolute inset-0 flex items-center px-[5%] z-20">
+            <div class="max-w-2xl text-white">
+                <h2 class="text-4xl md:text-7xl font-black uppercase leading-tight mb-4 drop-shadow-2xl">
+                    Excellence <br><span class="text-bcnhs-gold">Through Service</span>
+                </h2>
+                <p class="text-sm md:text-lg font-medium mb-8 text-gray-200 max-w-lg">
+                    Providing high-quality education and character building for the youth of Bislig City since 2002.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="bg-bcnhs-maroon border-2 border-bcnhs-gold px-8 py-3 text-sm font-black uppercase tracking-widest hover:bg-white hover:text-bcnhs-maroon transition-all">Enrollment Info</a>
+                    <a href="#" class="bg-white/10 backdrop-blur-md border-2 border-white/30 px-8 py-3 text-sm font-black uppercase tracking-widest hover:bg-white hover:text-bcnhs-maroon transition-all">Explore BCNHS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h3 class="text-bcnhs-maroon font-black text-sm uppercase tracking-[0.3em] mb-2">Academic Excellence</h3>
+            <h4 class="text-3xl md:text-5xl font-black text-slate-900">Education for the Future</h4>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="group bg-slate-50 p-10 border-t-4 border-bcnhs-maroon hover:bg-white hover:shadow-2xl transition-all">
+                <div class="text-4xl mb-4">🔬</div>
+                <h5 class="text-xl font-black mb-3 text-bcnhs-maroon uppercase">STEM Strand</h5>
+                <p class="text-sm text-slate-600 leading-relaxed">Developing future scientists, engineers, and mathematicians through rigorous academic training.</p>
+            </div>
+            <div class="group bg-slate-50 p-10 border-t-4 border-bcnhs-gold hover:bg-white hover:shadow-2xl transition-all">
+                <div class="text-4xl mb-4">📊</div>
+                <h5 class="text-xl font-black mb-3 text-bcnhs-maroon uppercase">ABM Strand</h5>
+                <p class="text-sm text-slate-600 leading-relaxed">Equipping students with business, accountancy, and management skills for the global market.</p>
+            </div>
+            <div class="group bg-slate-50 p-10 border-t-4 border-bcnhs-maroon hover:bg-white hover:shadow-2xl transition-all">
+                <div class="text-4xl mb-4">⚖️</div>
+                <h5 class="text-xl font-black mb-3 text-bcnhs-maroon uppercase">HUMSS Strand</h5>
+                <p class="text-sm text-slate-600 leading-relaxed">Nurturing critical thinking and social awareness for future leaders in humanities and social sciences.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+            <div class="col-span-2">
+                <img src="img/logo.png" alt="Logo" class="h-16 mb-6 grayscale brightness-200">
+                <h4 class="text-2xl font-black mb-4">Bislig City National High School</h4>
+                <p class="text-slate-400 text-sm max-w-md leading-relaxed">
+                    Dedicated to providing a world-class secondary education that empowers Filipino students to be globally competitive and morally upright.
+                </p>
+            </div>
+            <div>
+                <h5 class="font-black text-bcnhs-gold uppercase text-xs tracking-widest mb-6">Contact Us</h5>
+                <p class="text-sm text-slate-400">Bislig City, Surigao del Sur<br>Philippines</p>
+            </div>
+            <div>
+                <h5 class="font-black text-bcnhs-gold uppercase text-xs tracking-widest mb-6">Stay Connected</h5>
+                <a href="https://www.facebook.com/BisligCityNHS" class="text-sm text-slate-400 hover:text-white transition">Facebook Page</a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-slate-800 mt-16 pt-8 text-[10px] text-slate-500 uppercase tracking-widest text-center md:text-left">
+            &copy; 2026 Bislig City National High School. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            let slides = $('.slide');
+            let currentIndex = 0;
+            function showNextSlide() {
+                $(slides[currentIndex]).fadeOut(1500);
+                currentIndex = (currentIndex + 1) % slides.length;
+                $(slides[currentIndex]).fadeIn(1500);
+            }
+            setInterval(showNextSlide, 5000);
+        });
+    </script>
+</body>
+</html>
